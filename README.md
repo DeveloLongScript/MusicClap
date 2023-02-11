@@ -26,9 +26,9 @@
 # Okay, jokes aside.
 Table of Contents:
 * [How the heck does this work](https://github.com/DeveloLongScript/MusicClap#how-the-heck-does-this-work)
-* [Installing](https://github.com/DeveloLongScript/MusicClap/edit/main/README.md#installing)
-* [Music Intergration](https://github.com/DeveloLongScript/MusicClap/edit/main/README.md#music-intergration)
-* [Contributing](https://github.com/DeveloLongScript/MusicClap/edit/main/README.md#contributing)
+* [Installing](https://github.com/DeveloLongScript/MusicClap#installing)
+* [Music Intergration](https://github.com/DeveloLongScript/MusicClap#music-intergration)
+* [Contributing](https://github.com/DeveloLongScript/MusicClap#contributing)
 
 # How the heck does this work
 
