@@ -1,0 +1,17 @@
+{
+  "name": "musicclap",
+  "version": "1.0.0",
+  "description": "Play music in a clap.",
+  "repository": {
+    "url": "https://github.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npx electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.0.0"
+  }
+}
