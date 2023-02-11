@@ -31,6 +31,8 @@ Table of Contents:
 * [Contributing](https://github.com/DeveloLongScript/MusicClap#contributing)
 
 # How the heck does this work
+Well, it uses commands to precisly find your song. It also has support for playlists, or offical genre playlists as well.
+There's a documentation to learn it aswell.
 
 # Installing
 
