@@ -14,8 +14,6 @@ var devtools = false
 var reloading = false
 var devshort = false
 
-
-
 const createWindow = () => {
     win = new BrowserWindow({
         width: 800,
@@ -86,17 +84,24 @@ const createWindow = () => {
             print("yes")
         }
     }
+    
     about.webContents.on('will-navigate', handleRedirect)
     refreshTray()
     tray.setImage(path.join(__dirname, "/src/data/MusicClap.png"))
-    
+    tray.setTitle("MusicClap")
 }
 
 function closeWindow() {
     if (ipc) {
         if (json.littlesettings.notficlose == true) {
             json.littlesettings.notficlose = false
-            new Notification({ title: "Wait!", body: "MusicClap is still running in the background.", icon: path.join(__dirname, "/src/data/MusicClap.png"), image: path.join(__dirname, "/src/data/MusicClap.png"), appName: "MusicClap" })
+
+            if (process.platform === 'win32') {
+                tray.displayBalloon({title: "Wait!", content: "MusicClap is still running in the background."})
+            } else {
+                new Notification({ title: "Wait!", body: "MusicClap is still running in the background.", icon: path.join(__dirname, "/src/data/MusicClap.png"), image: path.join(__dirname, "/src/data/MusicClap.png"), appName: "MusicClap" })
+            }
+            
         }
         updateSettings()
         win.hide()
@@ -167,9 +172,15 @@ function refreshTray() {
                 },
 
                 {
-                    label: "Send Example Notifcaction",
+                    label: "Send Example Notification",
                     click: (item, window, event) => {
-                        new Notification({ title: "Hello", body: "Developer" }).show()
+                        if (process.platform === 'win32') {
+                            tray.displayBalloon({title: "Hello", content: "Developer"})
+                        } else {
+                            new Notification({ title: "Hello", body: "Developer" }).show()
+                        }
+                        
+                       
                     }
                 },
 

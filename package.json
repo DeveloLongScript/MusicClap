@@ -1,17 +1,19 @@
 {
   "name": "musicclap",
-  "version": "1.0.0",
+  "version": "0.2.5",
   "description": "Play music in a clap.",
   "repository": {
     "url": "https://github.com"
   },
   "main": "index.js",
   "scripts": {
-    "start": "npx electron ."
+    "start": "npx electron .",
+    "build-windows": "electron-builder -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^23.0.0"
+    "electron": "^23.0.0",
+    "electron-builder": "^23.6.0"
   }
 }
