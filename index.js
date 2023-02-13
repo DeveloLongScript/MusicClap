@@ -320,6 +320,10 @@ app.on('browser-window-blur', function () {
 });
 
 app.whenReady().then(() => {
+    if (!fs.existsSync("./settings.json")) {
+        fs.writeFileSync("./settings.json", '{"littlesettings": {"notficlose": false}, "config": {"devMode": false}}')
+   }
+
     fs.readFile('./settings.json', 'utf8', function (err, data) {
         if (err) throw err; // we'll not consider error handling for now
         json = JSON.parse(data);
